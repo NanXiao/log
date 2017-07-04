@@ -8,7 +8,7 @@ template <typename First, typename... Rest>
 void log(std::ostream& out, std::stringstream& ss, First&& first, Rest&&... rest)
 {
 	ss << std::forward<First>(first);
-    log(out, ss, std::forward<Rest>(rest)...);
+	log(out, ss, std::forward<Rest>(rest)...);
 	return;
 }
 
@@ -17,6 +17,6 @@ void log(std::ostream& out, First&& first, Rest&&... rest)
 {
 	std::stringstream ss;
 	ss << std::forward<First>(first);
-    log(out, ss, std::forward<Rest>(rest)...);
+	log(out, ss, std::forward<Rest>(rest)...);
 	return;
 }
