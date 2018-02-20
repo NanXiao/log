@@ -2,6 +2,6 @@
 
 void log(std::ostream& out, std::stringstream& ss)
 {
-	out << ss.str();
-	return;
+    out << ss.str();
+    return;
 }
